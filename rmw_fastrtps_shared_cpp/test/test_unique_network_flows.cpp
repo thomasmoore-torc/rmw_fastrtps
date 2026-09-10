@@ -80,7 +80,7 @@ protected:
     const char * error_str;
     error_str = rcutils_get_env("RMW_FASTRTPS_ROS_DISCOVERY_INFO_UNIQUE_NETWORK_FLOWS", &env_value);
     ASSERT_EQ(error_str, nullptr) << "Error getting env var: " << error_str;
-    value = ((nullptr != env_value) && 
+    value = ((nullptr != env_value) &&
       (*env_value != '\0')) ? std::optional<std::string>(env_value) : std::nullopt;
   }
 
